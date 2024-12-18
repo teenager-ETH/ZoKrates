@@ -223,7 +223,7 @@ impl<T: Field> LinComb<T> {
 
     pub fn try_summand(self) -> Result<(Variable, T), Self> {
         match self.value.len() {
-            // if the lincomb is empty, it is not reduceable to a summand
+            // if the lincomb is empty, it is not reducible to a summand
             0 => Err(self),
             _ => {
                 // take the first variable in the lincomb
